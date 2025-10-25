@@ -14,7 +14,7 @@ class SchedulePage extends StatelessWidget {
         bottom: false,
         child: Column(
           children: [
-            // HEADER (green with back arrow and title)
+            // HEADER 
             Container(
               height: headerHeight,
               width: double.infinity,
@@ -94,7 +94,7 @@ class SchedulePage extends StatelessWidget {
                   _NavItem(icon: Icons.local_florist_outlined, label: 'Catalog'),
                   _NavItem(icon: Icons.schedule_outlined, label: 'Schedule', isActive: true),
                   _NavItem(icon: Icons.menu_book_outlined, label: 'Library'),
-                  _NavItem(icon: Icons.camera_alt_outlined, label: 'AI'), // ✅ camera icon remains
+                  _NavItem(icon: Icons.camera_alt_outlined, label: 'AI'),
                 ],
               ),
             ),
