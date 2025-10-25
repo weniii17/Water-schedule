@@ -48,69 +48,32 @@ class SchedulePage extends StatelessWidget {
 
             // MAIN CONTENT
             Expanded(
-              child: Stack(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: ListView(
-                      padding: const EdgeInsets.only(top: 18, bottom: 80),
-                      children: [
-                        _SectionHeader(title: 'Today'),
-                        const SizedBox(height: 8),
-                        const _PlaceholderCard(text: 'No tasks for today'),
-                        const SizedBox(height: 20),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: ListView(
+                  padding: const EdgeInsets.only(top: 18, bottom: 80),
+                  children: const [
+                    _SectionHeader(title: 'Today'),
+                    SizedBox(height: 8),
+                    _PlaceholderCard(text: 'No tasks for today'),
+                    SizedBox(height: 20),
 
-                        _SectionHeader(title: 'Overdue'),
-                        const SizedBox(height: 8),
-                        const _PlaceholderCard(text: 'No overdue tasks'),
-                        const SizedBox(height: 20),
+                    _SectionHeader(title: 'Overdue'),
+                    SizedBox(height: 8),
+                    _PlaceholderCard(text: 'No overdue tasks'),
+                    SizedBox(height: 20),
 
-                        _SectionHeader(title: 'Upcoming'),
-                        const SizedBox(height: 8),
-                        const _PlaceholderCard(text: 'No upcoming tasks'),
-                        const SizedBox(height: 20),
+                    _SectionHeader(title: 'Upcoming'),
+                    SizedBox(height: 8),
+                    _PlaceholderCard(text: 'No upcoming tasks'),
+                    SizedBox(height: 20),
 
-                        _SectionHeader(title: 'Completed'),
-                        const SizedBox(height: 8),
-                        const _PlaceholderCard(text: 'No completed tasks'),
-                        const SizedBox(height: 120),
-                      ],
-                    ),
-                  ),
-
-                  // ADD BUTTON inside content zone
-                  Positioned(
-                    bottom: 20,
-                    right: 25,
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => const RegisteredPlantsPage()),
-                        );
-                      },
-                      child: Container(
-                        width: 65,
-                        height: 65,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF77E4C8),
-                          shape: BoxShape.circle,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.2),
-                              blurRadius: 6,
-                              offset: const Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        child: const Icon(
-                          Icons.add,
-                          size: 32,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+                    _SectionHeader(title: 'Completed'),
+                    SizedBox(height: 8),
+                    _PlaceholderCard(text: 'No completed tasks'),
+                    SizedBox(height: 120),
+                  ],
+                ),
               ),
             ),
 
@@ -131,7 +94,7 @@ class SchedulePage extends StatelessWidget {
                   _NavItem(icon: Icons.local_florist_outlined, label: 'Catalog'),
                   _NavItem(icon: Icons.schedule_outlined, label: 'Schedule', isActive: true),
                   _NavItem(icon: Icons.menu_book_outlined, label: 'Library'),
-                  _NavItem(icon: Icons.camera_alt_outlined, label: 'AI'), // ✅ changed icon here
+                  _NavItem(icon: Icons.camera_alt_outlined, label: 'AI'), // ✅ camera icon remains
                 ],
               ),
             ),
